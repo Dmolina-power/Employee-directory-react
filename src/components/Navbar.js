@@ -2,13 +2,13 @@ import React from "react";
 
 function Navbar() {
   return (
-    <nav class="navbar navbar-dark bg-dark text-white">
-      <a class="navbar-brand">Employee Directory</a>
-      <form class="form-inline">
+    <nav className="navbar navbar-dark bg-dark text-white">
+      <div className="navbar-brand">Employee Directory</div>
+      <form className="form-inline">
         <input
-          class="form-control mr-sm-2"
+          className="form-control mr-sm-4"
           type="search"
-          placeholder="Search for employee"
+          placeholder="Search by Employee"
           aria-label="Search"
         />
       </form>
