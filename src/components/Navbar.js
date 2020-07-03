@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 function Navbar() {
   return (
     <nav className="navbar navbar-dark bg-dark text-white">
@@ -12,8 +10,9 @@ function Navbar() {
           type="search"
           placeholder="Search by Employee"
           aria-label="Search"
-          onChange={this.handleInputChange}
-                value={this.state.search}
+          name="search"
+          onChange={props.handleInputChange}
+          value={props.search}
         />
       </form>
     </nav>
