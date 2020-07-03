@@ -1,80 +1,42 @@
 import React from 'react';
 import Navbar from "./components/Navbar";
-import Table from "./components/table";
+import Table from "./components/Table";
 import API from "./utils/API";
+import moment from "moment";
+import "./App.css";
+
 
 
 class App extends React.Component {
   state = {
     results: [],
     search: "",
+    
   }; 
 
   componentDidMount() {
-    API.employee().then(({ data }) => {
-      const users = data.results.map((user) => {
-        console.log(user)
-        return {
-
-          
-        };
-      });
-
-      const sortname = users.sort((a, b) =>
-        a.fullname.localeCompare(b.fullname)
-      );
-      this.setState({ results: sortname });
-    });
+    API.getUser()
+      .then(res =>
+        res.data.results.map(result => ({
+          name: `${result.name.first} ${result.name.last}`,
+          searchName: `${result.name.first}${result.name.last}`,
+          id: result.registered.date,
+          photo: result.picture.medium,
+          email: result.email,
+          phone: result.phone,
+          location: result.location.city,
+          dob: moment(result.dob.date).format("MM/DD/YYYY"),
+        }))
+      )
+      .then(newData => this.setState({ results: newData }))
+      .catch(error => console.log(error));
   }
-
-  onSortUp = () => {
-    const sortUp = this.state.results.sort((a, b) =>
-      a.fullname.localeCompare(b.fullname)
-    );
-
-    this.setState({
-      results: sortUp,
-    });
-  };
-
-  onSortDown = () => {
-    const sortDown = this.state.results.sort((a, b) =>
-      b.fullname.localeCompare(a.fullename)
-    );
-
-    this.setState({
-      results: sortDown,
-    });
-  };
+  
+  
 
   
 
-  // this.state.results
-  //   .filter((employee) =>
-  //     employee.fullname.toLowerCase().includes(this.state.search)
-  //   )
-  //   .map((result) => (
-      
-  //       photo={result.image},
-  //       name={result.fullname},
-  //       email={result.email},
-  //       phone={result.phone},
-  //       dob={result.dob},
-  //   ))    
-      
-    
-
-  render(){
-    return (
-      <div>
-      < Navbar/>
-      < Table/>
-      </div>
-    );
-  }
-}
-
-
+  
 
 
 
