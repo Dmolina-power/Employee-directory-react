@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,KACI,wBACJ,CAIA,GACI,iBAAkB,CAClB,gBAEJ","file":"main.7c7b820f.chunk.css","sourcesContent":["body{\n    background-color: rgb(138, 166, 244);\n}\n\n\n\ntd{\n    text-align: center;\n    font-size: larger;\n    \n}\n\n"]}
