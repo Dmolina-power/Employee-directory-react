@@ -1,6 +1,6 @@
 {
   "name": "employee-directory-react",
-  "home": "https://dmolina-power.github.io/Employee-directory-react/",
+  "homepage": "https://dmolina-power.github.io/Employee-directory-react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
