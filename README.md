@@ -41,6 +41,6 @@ This app utilizes an API to populate random users and then create a directory. O
 ## Contributing 
 Daniel Molina-Power 
 
-![Avatar Image](https://avatars0.githubusercontent.com/u/62960620?v=4)
 
+![avatar](https://images.weserv.nl/?url=avatars0.githubusercontent.com/u/62960620?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d)
 
